@@ -1,0 +1,35 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: Compile and link active file",
+            "command": "cl.exe",
+            "args": [
+                "/nologo",
+                "/O2",
+                "/GL",
+                "/MT",
+                "/D \"WIN32_LEAN_AND_MEAN\"",
+                "/std:c++17",
+                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}",
+                "/DEBUG:NONE",
+                "user32.lib",
+                "gdi32.lib",
+                "opengl32.lib"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Main C++ build task for a single file."
+        }
+    ],
+    "version": "2.0.0"
+}
